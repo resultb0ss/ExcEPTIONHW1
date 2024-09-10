@@ -19,9 +19,9 @@ fun createList(list: Array<String?>): Array<String?> {
         println("Введите позицию в каталоге")
         var inputPosition = readln()
         list[inputPosition.toInt()] = inputName
-    } catch (e: Exception) {
-        println(e.message)
     } catch (e: MyException) {
+        println(e.message)
+    } catch (e: Exception) {
         println(e.message)
     }
     return list
